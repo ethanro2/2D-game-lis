@@ -1,5 +1,6 @@
 #include <SDL2/SDL.h>
-#include "game.h"
+#include <SDL2/SDL_image.h>
+#include "src/game.h"
 
 
 Game *game = nullptr;
