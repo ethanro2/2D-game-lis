@@ -1,12 +1,12 @@
 
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall $(shell pkg-config --cflags sdl2)
-LDFLAGS = $(shell pkg-config --libs sdl2)
-
+CXXFLAGS = -std=c++17 -Wall $(shell pkg-config --cflags sdl2 SDL2_image)
+LDFLAGS = $(shell pkg-config --libs sdl2 SDL2_image)
+	
 TARGET = sdltest
-SRCS = main.cpp game.cpp
+SRCS = main.cpp src/game.cpp src/textureManage.cpp
 OBJS = $(SRCS:.cpp=.o)
-HEADERS = game.h
+HEADERS = src/game.h src/textureManage.h
 
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $(OBJS) $(LDFLAGS)
