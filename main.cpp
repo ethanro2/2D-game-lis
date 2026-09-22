@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
     int frameTime;
 
     game = new Game();
-    game->init("Game Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
+    game->init("Game Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 640, false);
     //FULLSCREEN CURRENTLY SET TO FALSE FOR DEV PURPOSES. CHANGE IN FINAL VERSION!!!
 
     //Game Loop

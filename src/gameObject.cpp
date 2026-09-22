@@ -1,10 +1,9 @@
 #include "gameObject.h"
 #include "textureManage.h"
 
-gameObject::gameObject(const char* textureSheet, SDL_Renderer* ren, int startX, int startY)
+gameObject::gameObject(const char* textureSheet, int startX, int startY)
 {
-    renderer = ren;
-    objTexture = textureManager::LoadTexture(textureSheet, ren);
+    objTexture = textureManager::LoadTexture(textureSheet);
     x = startX;
     y = startY;
 }
@@ -28,5 +27,5 @@ void gameObject::update()
 
 void gameObject::render()
 {
-    SDL_RenderCopy(renderer, objTexture, &srcRect, &destRect);
+    SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }

@@ -5,7 +5,9 @@
 #include "gameObject.h"
 
 gameObject* player;
+gameObject* enemy; //COME BACK TO THIS AND ADD ENEMY WHEN PNG IS READY. #5 for reference
 
+SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game(){
 
@@ -42,7 +44,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
    else{
             isRunning = false;
         }
-        player = new gameObject("assets/player.png", renderer, 0, 0);
+        player = new gameObject("assets/player.png", 0, 0);
        
     }
 

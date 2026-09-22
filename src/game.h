@@ -2,6 +2,7 @@
 #define Game_h
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 
 class Game {
@@ -15,14 +16,14 @@ public:
     void render();
     void clean();
     
+    static SDL_Renderer* renderer;
     bool running();
 
 private:
     int count = 0;
     bool isRunning;
     SDL_Window *window;
-    SDL_Renderer *renderer;
-    
+
 };
 
 #endif /* Game_h */
